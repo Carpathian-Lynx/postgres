@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: postgres
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: postgres
@@ -11,6 +12,10 @@ spec:
       labels:
         app: postgres
     spec:
+      volumes:
+      - name: postgres-storage
+        persistentVolumeClaim:
+          claimName: postgres-volume-claim
       containers:
       - name: postgres
         image: postgres:latest
@@ -37,4 +42,6 @@ spec:
             configMapKeyRef:
               name: postgres-configmap
               key: POSTGRES_PASSWORD
-
+        volumeMounts:
+        - name: postgres-storage 
+          mountPath: "/var/lib/postgres"
