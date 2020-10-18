@@ -70,14 +70,11 @@ You can use [Kustomize](https://github.com/kubernetes-sigs/kustomize/releases/ta
 ### Only kubectl
 Run the following to configure everything needed:
 ```
-kubectl apply -f configmap.yaml
+kubectl apply -f config-map.yaml
 kubectl apply -f service.yaml
-kubectl apply -f storage.yaml
+kubectl apply -f volume.yaml
+kubectl apply -f volume-claim.yaml
 kubectl apply -f deployment.yaml
-```
-Create:
-```
-kubectl create -f deployment.yaml
 ```
 Recreate:
 ```

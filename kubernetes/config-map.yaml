@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: postgres-configmap
+  name: postgres-config-map
 data:
   POSTGRES_PASSWORD: pass
   POSTGRES_DB: postgres

@@ -3,5 +3,6 @@ commonLabels:
 resources:
 - deployment.yaml
 - service.yaml
-- configmap.yaml
-- storage.yaml
+- config-map.yaml
+- volume.yaml
+- volume-claim.yaml
