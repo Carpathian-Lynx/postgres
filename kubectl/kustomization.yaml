@@ -1,0 +1,7 @@
+commonLabels:
+  app: postgres
+resources:
+- deployment.yaml
+- service.yaml
+- configmap.yaml
+- storage.yaml
