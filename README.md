@@ -6,7 +6,6 @@
 - [Connect to the database](#connect-to-the-database)
 
 ## Using Docker
-If you wish to keep your data after you restart Docker, use the [Kubernetes](#using-kubernetes) section.
 
 ### Single line command
 
@@ -94,4 +93,4 @@ The other steps are the same.
 The Kubernetes version can also use the [lynx-postgres](#running-with-initial-setup-scripts) image created previously.
 
 ## Connect to the database
-Your database is available at localhost:[port]/postgres, user postgres and the password you set.
+Your database is available at localhost:[port]/postgres, user **postgres** and the password you set.

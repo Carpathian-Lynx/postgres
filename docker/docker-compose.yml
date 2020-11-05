@@ -3,7 +3,12 @@ version: "3.7"
 services:
   postgres:
     image: postgres:latest
+    volumes:
+      - postgres_volume:/home/postgres/volume
     environment: 
       POSTGRES_PASSWORD: 'pass'
     ports:
       - 5432:5432
+
+volumes:
+  postgres_volume:
